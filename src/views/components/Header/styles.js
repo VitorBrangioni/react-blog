@@ -10,5 +10,5 @@ export const Header = styled.header`
 `;
 
 export const Container = styled.div`
-    align-items: center;
+  align-items: center;
 `;

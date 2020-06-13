@@ -21,8 +21,7 @@ header img {
   padding: 15px 0;
 }
 
-@media(max-width: 800px) {
-
+@media (max-width: 800px) {
   .one,
   .two,
   .three {
@@ -54,7 +53,7 @@ header img {
   .on .menu-toggle {
     position: absolute;
     right: 30px;
-    top: 30px;  
+    top: 30px;
   }
 
   .on .menu-toggle .one {
