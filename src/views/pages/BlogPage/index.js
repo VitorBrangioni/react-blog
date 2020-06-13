@@ -6,7 +6,9 @@ import RecentPosts from "../../components/RecentPosts";
 import { Main, Container, Aside } from "./styles";
 
 export class BlogPage extends Component {
+
   render() {
+    
     return (
       <Container>
         <Header />
