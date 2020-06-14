@@ -15,8 +15,8 @@ class PostsList extends Component {
     const { data } = this.props.resGetPosts;
     return (
       <Container>
-        {data.map((post) => (
-          <Post title={post.title} body={post.body} />
+        {data.map((post, i) => (
+          <Post title={post.title} body={post.body} key={i}/>
         ))}
       </Container>
     );
