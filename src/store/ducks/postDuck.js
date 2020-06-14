@@ -14,12 +14,14 @@ export const { Types, Creators } = createActions({
 
 const INITIAL_STATE = {
   data: [],
+  recentPosts: [],
   loading: false,
   error: false,
 };
 
 const getPosts = (state = INITIAL_STATE, { payload }) => ({
   data: payload.data,
+  recentPosts: payload.recentPosts,
   loading: payload.loading,
   error: payload.error,
 });
