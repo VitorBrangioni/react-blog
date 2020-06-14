@@ -11,6 +11,16 @@ html {
   font-size: 62.5%;
 }
 
+main {
+  padding: 60px;
+  background: white;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 100%;
+  grid-row-start: 2;
+  grid-row-end: null;
+}
+
 h2 {
   color: white;
   font-size: 2.6rem;

@@ -6,7 +6,8 @@ import {
   ContainerBody,
   Button,
   Title,
-  Body
+  Body,
+  ContainerButton
 } from "./styles";
 
 const Post = ({ title, body }) => {
@@ -19,7 +20,7 @@ const Post = ({ title, body }) => {
         <ContainerBody>
           <Body>{body}</Body>
         </ContainerBody>
-        <Button>Ler mais</Button>
+          <Button>Ler mais</Button>
       </Box>
     </Container>
   );
