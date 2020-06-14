@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as PostsActions } from "../../../store/ducks/postDuck";
 import Select from "react-select";
+import AuthorController from "../../../controllers/AuthorController";
 
 const options = [
   { value: "chocolate", label: "Chocolate" },
@@ -17,7 +18,26 @@ class PostsListFilter extends Component {
     this.state = {
       selectedAuthor: null,
       selectedOrder: null,
+      authors: [{ value: -1, label: "Todos" }],
+      orders: [
+        { value: 1, label: "Crescente" },
+        { value: -1, label: "Decrescente" },
+      ],
     };
+  }
+
+  componentDidMount() {
+    this.getAuthors();
+  }
+
+  getAuthors() {
+    AuthorController.get().then((authors) => {
+      const authorsFormatted = authors.map(({ id, name }) => ({
+        value: id,
+        label: name,
+      }));
+      this.setState({ authors: [...this.state.authors, ...authorsFormatted] });
+    });
   }
 
   handleAuthor(selectedAuthor) {
@@ -33,8 +53,8 @@ class PostsListFilter extends Component {
   }
 
   render() {
-    const { selectedAuthor, selectedOrder } = this.state;
-
+    const { selectedAuthor, selectedOrder, authors, orders } = this.state;
+    console.log(authors);
     return (
       <Container>
         <div>
@@ -44,7 +64,7 @@ class PostsListFilter extends Component {
           <Select
             value={selectedAuthor}
             onChange={this.handleAuthor.bind(this)}
-            options={options}
+            options={authors}
           />
         </div>
         <div>
@@ -54,7 +74,7 @@ class PostsListFilter extends Component {
           <Select
             value={selectedOrder}
             onChange={this.handleOrder.bind(this)}
-            options={options}
+            options={orders}
           />
         </div>
       </Container>
