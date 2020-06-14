@@ -4,9 +4,8 @@ import { createActions, createReducer } from "reduxsauce";
  * Action types & creators
  */
 export const { Types, Creators } = createActions({
-    getPosts: [],
-    // successGetPosts: [],
-    // failureGetProfile: []
+  getPosts: [],
+  responseGetPosts: [],
 });
 
 /**
@@ -14,18 +13,20 @@ export const { Types, Creators } = createActions({
  */
 
 const INITIAL_STATE = {
-    data: [],
-    loading: false,
-    error: false,
+  data: [],
+  loading: false,
+  error: false,
 };
 
-const getPosts = (state = INITIAL_STATE, action) => ({
-    data: action.payload.data, loading: false, error: false
+const getPosts = (state = INITIAL_STATE, { payload }) => ({
+  data: payload.data,
+  loading: payload.loading,
+  error: payload.error,
 });
 
 /**
  * Reducer
  */
 export default createReducer(INITIAL_STATE, {
-    [Types.GET_POSTS]: getPosts
+  [Types.RESPONSE_GET_POSTS]: getPosts,
 });

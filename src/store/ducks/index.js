@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import PostDuck from "./PostDuck";
+import PostDuck from "./postDuck";
 
 export default combineReducers({
     PostDuck
