@@ -17,7 +17,7 @@ const INITIAL_STATE = {
   data: [],
   recentPosts: [],
   authors: [],
-  loading: false,
+  loading: true,
   error: false,
 };
 

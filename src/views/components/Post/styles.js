@@ -61,8 +61,7 @@ export const Button = styled.button`
   }
 `;
 
-export const Title = styled.h2`
-`;
+export const Title = styled.h2``;
 
 export const Body = styled.p`
   font-size: 1.8rem;

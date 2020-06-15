@@ -4,6 +4,7 @@ import { Container } from "./styles";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as PostsActions } from "../../../store/ducks/postDuck";
+import { PostsListLoader } from "../Loader";
 
 class PostsList extends Component {
   constructor(props) {
@@ -12,8 +13,10 @@ class PostsList extends Component {
   }
 
   render() {
-    const { data } = this.props.resGetPosts;
-    console.log(this.props.resGetPosts);
+    const { data, loading } = this.props.resGetPosts;
+    if (loading) {
+      return (<PostsListLoader />);
+    } 
     return (
       <Container>
         {data.map((post, i) => (
