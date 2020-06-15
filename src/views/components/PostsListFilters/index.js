@@ -6,22 +6,16 @@ import { Creators as PostsActions } from "../../../store/ducks/postDuck";
 import Select from "react-select";
 import AuthorController from "../../../controllers/AuthorController";
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-
 class PostsListFilter extends Component {
   constructor() {
     super();
     this.state = {
-      selectedAuthor: null,
-      selectedOrder: null,
-      authors: [{ value: -1, label: "Todos" }],
+      selectedAuthor: { value: null, label: "Todos" },
+      selectedOrder: { value: 1, label: "Crescente" },
+      authors: [{ value: null, label: "Todos" }],
       orders: [
-        { value: 1, label: "Crescente" },
-        { value: -1, label: "Decrescente" },
+        { value: -1, label: "Crescente" },
+        { value: 1, label: "Decrescente" },
       ],
     };
   }
@@ -41,12 +35,14 @@ class PostsListFilter extends Component {
   }
 
   handleAuthor(selectedAuthor) {
+    this.props.getPosts(selectedAuthor.value, this.state.selectedOrder.value);
     this.setState({ selectedAuthor }, () =>
       console.log(`Option selected:`, this.state.selectedAuthor)
     );
   }
 
   handleOrder(selectedOrder) {
+    this.props.getPosts(this.state.selectedAuthor.value, selectedOrder.value);
     this.setState({ selectedOrder }, () =>
       console.log(`Option selected:`, this.state.selectedOrder)
     );
@@ -54,7 +50,6 @@ class PostsListFilter extends Component {
 
   render() {
     const { selectedAuthor, selectedOrder, authors, orders } = this.state;
-    console.log(authors);
     return (
       <Container>
         <div>

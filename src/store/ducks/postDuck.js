@@ -4,7 +4,7 @@ import { createActions, createReducer } from "reduxsauce";
  * Action types & creators
  */
 export const { Types, Creators } = createActions({
-  getPosts: [],
+  getPosts: ['authorId', 'order'],
   responseGetPosts: [],
 });
 

@@ -8,7 +8,7 @@ import { Creators as PostsActions } from "../../../store/ducks/postDuck";
 class PostsList extends Component {
   constructor(props) {
     super(props);
-    this.props.getPosts();
+    this.props.getPosts(null, -1);
   }
 
   render() {

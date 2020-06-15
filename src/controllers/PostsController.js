@@ -4,10 +4,14 @@ class PostsController {
 
   static getPosts() {
     return HttpRequest.get("5be5e3fa2f000082000fc3f8").then((res) => {
-      // console.log(res.data);
       return res.data;
     });
   }
+
+  static getPostsByAuthor(authorId) {
+    
+  }
+
 }
 
 export default PostsController;
