@@ -14,7 +14,7 @@ export class PostPage extends Component {
       <Container>
         <Header />
         <Main>
-          <BtnClose onClick={() => history.goBack()}>
+          <BtnClose onClick={() => history.push('blog')}>
             <LineXOne />
             <LineXTwo />
           </BtnClose>
@@ -22,7 +22,7 @@ export class PostPage extends Component {
           <p>{body}</p>
         </Main>
         <Aside>
-          <RecentPosts />
+          <RecentPosts  history={history}/>
         </Aside>
       </Container>
     );

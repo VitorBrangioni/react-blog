@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import { Container } from "./styles";
+import { Container, Link } from "./styles";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as PostsActions } from "../../../store/ducks/postDuck";
 
 class RecentPosts extends Component {
   render() {
+    const { history } = this.props;
     const { recentPosts } = this.props.resGetPosts;
+    console.log("his", history);
 
     return (
       <Container>
@@ -15,11 +17,13 @@ class RecentPosts extends Component {
         </div>
         <div>
           {recentPosts.map((post, i) => (
-            <a href="" key={`recent-post-${i}`}>
+            <Link
+              key={`recent-post-${i}`}
+              onClick={() => history.push("post", { post })}
+            >
               <h3>- {post.title}</h3>
-            </a>
+            </Link>
           ))}
-          ;
         </div>
       </Container>
     );

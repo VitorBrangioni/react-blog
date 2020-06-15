@@ -9,6 +9,7 @@ import { Main, Container, Aside } from "./styles";
 export class BlogPage extends Component {
 
   render() {
+    const { history } = this.props;
     
     return (
       <Container>
@@ -18,7 +19,7 @@ export class BlogPage extends Component {
         </Main>
         <Aside>
           <PostsListFilters />
-          <RecentPosts />
+          <RecentPosts history={history}/>
         </Aside>
       </Container>
     );
