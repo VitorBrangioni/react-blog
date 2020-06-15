@@ -54,6 +54,7 @@ export const Button = styled.button`
   transition: all 0.5s ease-in-out;
   font-size: 1.4rem;
   color: white;
+  cursor: pointer;
   &:hover {
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;

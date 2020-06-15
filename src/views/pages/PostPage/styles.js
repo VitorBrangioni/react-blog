@@ -26,5 +26,29 @@ export const Aside = styled.aside`
 `;
 
 export const H1 = styled.h1`
-    color: #212121;
+  color: #212121;
+`;
+
+export const BtnClose = styled.div`
+  width: 40px;
+  position: absolute;
+  top: 25%;
+  right: 29%;
+  cursor: pointer;
+`;
+
+export const LineXOne = styled.div`
+  transform: rotate(45deg) translate(7px, 7px);
+  background-color: #212121;
+  height: 5px;
+  width: 100%;
+  margin: 6px auto;
+`;
+
+export const LineXTwo = styled.div`
+  transform: rotate(-45deg) translate(1px, -3px);
+  background-color: #212121;
+  height: 5px;
+  width: 100%;
+  margin: 6px auto;
 `;

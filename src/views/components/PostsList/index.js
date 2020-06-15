@@ -16,7 +16,7 @@ class PostsList extends Component {
     return (
       <Container>
         {data.map((post, i) => (
-          <Post post={post} key={i}/>
+          <Post post={post} key={i} />
         ))}
       </Container>
     );

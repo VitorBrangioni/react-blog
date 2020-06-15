@@ -1,0 +1,25 @@
+.one,
+.two,
+.three {
+  background-color: #212121;
+  height: 5px;
+  width: 100%;
+  margin: 6px auto;
+}
+
+.menu-toggle {
+  width: 40px;
+  position: absolute;
+  top: 220px;
+  right: 370px;
+}
+
+.menu-toggle .one {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.menu-toggle .two {
+  opacity: 0;
+}
+.menu-toggle .three {
+  transform: rotate(-45deg) translate(8px, -9px);
+}
