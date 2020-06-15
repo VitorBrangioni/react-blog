@@ -25,6 +25,12 @@ export const Aside = styled.aside`
   padding: 60px 30px;
 `;
 
+export const BodyContainer = styled.p`
+  margin-bottom: 70px;
+`;
+
+export const Legend = styled.p``;
+
 export const H1 = styled.h1`
   color: #212121;
 `;

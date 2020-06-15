@@ -1,8 +1,8 @@
+import moment from "moment";
+
 class DateHelper {
-  static order(dates = []) {
-    return dates.sort(function (a, b) {
-      return a - b;
-    });
+  static formatDatetime(datetime, format = "YYYY-MM-DD") {
+    return moment(datetime).format(format);
   }
 }
 

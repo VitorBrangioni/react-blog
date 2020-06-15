@@ -4,7 +4,7 @@ export const Container = styled.div`
   margin: auto;
   width: 100%;
   padding: 20px;
-  height: 360px;
+  height: 500px;
 `;
 
 export const Box = styled.div`
@@ -19,13 +19,13 @@ export const Box = styled.div`
 export const ContainerTitle = styled.div`
   position: relative;
   width: 100%;
-  height: 30%;
+  height: 25%;
   text-align: center;
   color: white;
 `;
 
 export const ContainerBody = styled.div`
-  padding: 0px 20px 0px 20px;
+  padding: 0px 10px 0px 20px;
   position: relative;
   width: 100%;
   heigth: 100px;
@@ -65,4 +65,10 @@ export const Title = styled.h2`
 `;
 
 export const Body = styled.p`
+  font-size: 1.8rem;
+`;
+
+export const Legend = styled.p`
+  color: #212121;
+  font-size: 1.6rem;
 `;

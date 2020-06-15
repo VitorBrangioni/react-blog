@@ -2,27 +2,44 @@ import React, { Component } from "react";
 import "../BlogPage/styles.css";
 import Header from "../../components/Header";
 import RecentPosts from "../../components/RecentPosts";
-import { Main, Container, Aside, H1, BtnClose, LineXOne, LineXTwo } from "./styles";
-
+import DateHelper from "../../../helpers/DateHelper";
+import {
+  Main,
+  Container,
+  Aside,
+  BodyContainer,
+  Legend,
+  H1,
+  BtnClose,
+  LineXOne,
+  LineXTwo,
+} from "./styles";
 
 export class PostPage extends Component {
   render() {
     const { history } = this.props;
-    const { title, body } = this.props.location.state.post;
+    const { title, body, metadata } = this.props.location.state.post;
+    const { authorId, publishedAt } = metadata;
 
     return (
       <Container>
         <Header />
         <Main>
-          <BtnClose onClick={() => history.push('blog')}>
+          <BtnClose onClick={() => history.push("blog")}>
             <LineXOne />
             <LineXTwo />
           </BtnClose>
           <H1>{title}</H1>
-          <p>{body}</p>
+          <BodyContainer>{body}</BodyContainer>
+          <Legend>
+            <strong>Author: {}</strong>
+          </Legend>
+          <Legend>
+            <strong>Data: {DateHelper.formatDatetime(publishedAt)}</strong>
+          </Legend>
         </Main>
         <Aside>
-          <RecentPosts  history={history}/>
+          <RecentPosts history={history} />
         </Aside>
       </Container>
     );
