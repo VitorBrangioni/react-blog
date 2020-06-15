@@ -1,16 +1,14 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import BlogPage from '../src/views/pages/BlogPage';
-
-const TestComp = () => <h1>Alo</h1>;
+import PostPage from '../src/views/pages/PostPage';
 
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/blog">
-        <BlogPage />
-      </Route>
+      <Route exact path="/blog" render={ props =>  <BlogPage {...props} />} />
+      <Route exact path="/post" render={ props =>  <PostPage {...props} />} />
     </Switch>
   </BrowserRouter>
 );

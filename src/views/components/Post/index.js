@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import {
   Container,
   Box,
@@ -9,7 +10,10 @@ import {
   Body,
 } from "./styles";
 
-const Post = ({ title, body }) => {
+const Post = ({ post }) => {
+  const history = useHistory();
+  const { title, body } = post;
+
   return (
     <Container>
       <Box>
@@ -19,7 +23,9 @@ const Post = ({ title, body }) => {
         <ContainerBody>
           <Body>{`${body.slice(0, 200)}...`}</Body>
         </ContainerBody>
-          <Button>Ler mais</Button>
+        <Button onClick={() => history.push("/post", { post })}>
+          Ler mais
+        </Button>
       </Box>
     </Container>
   );

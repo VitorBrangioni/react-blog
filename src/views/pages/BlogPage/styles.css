@@ -52,3 +52,7 @@ h1 {
   padding-bottom: 5px;
   text-transform: uppercase;
 }
+
+p {
+  font-size: 1.6rem;
+}
