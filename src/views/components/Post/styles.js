@@ -31,6 +31,7 @@ export const ContainerBody = styled.div`
   heigth: 100px;
   text-align: center;
   color: white;
+  font-size: 1.6rem;
 `;
 
 export const ContainerButton = styled.div`
