@@ -13,6 +13,7 @@ class PostsList extends Component {
 
   render() {
     const { data } = this.props.resGetPosts;
+    console.log(this.props.resGetPosts);
     return (
       <Container>
         {data.map((post, i) => (

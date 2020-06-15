@@ -18,8 +18,8 @@ import {
 export class PostPage extends Component {
   render() {
     const { history } = this.props;
-    const { title, body, metadata } = this.props.location.state.post;
-    const { authorId, publishedAt } = metadata;
+    const { title, body, author, metadata } = this.props.location.state.post;
+    const { publishedAt } = metadata;
 
     return (
       <Container>
@@ -32,10 +32,10 @@ export class PostPage extends Component {
           <H1>{title}</H1>
           <BodyContainer>{body}</BodyContainer>
           <Legend>
-            <strong>Author: {}</strong>
+            Author: {author.name}
           </Legend>
           <Legend>
-            <strong>Data: {DateHelper.formatDatetime(publishedAt)}</strong>
+            Data: {DateHelper.formatDatetime(publishedAt)}
           </Legend>
         </Main>
         <Aside>

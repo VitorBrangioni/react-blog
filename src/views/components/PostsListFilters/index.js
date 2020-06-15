@@ -4,34 +4,19 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as PostsActions } from "../../../store/ducks/postDuck";
 import Select from "react-select";
-import AuthorController from "../../../controllers/AuthorController";
+const defaultAuthors = [{ value: null, label: "Todos" }];
 
 class PostsListFilter extends Component {
   constructor() {
     super();
     this.state = {
-      selectedAuthor: { value: null, label: "Todos" },
+      selectedAuthor: defaultAuthors[0],
       selectedOrder: { value: 1, label: "Crescente" },
-      authors: [{ value: null, label: "Todos" }],
       orders: [
         { value: -1, label: "Crescente" },
         { value: 1, label: "Decrescente" },
       ],
     };
-  }
-
-  componentDidMount() {
-    this.getAuthors();
-  }
-
-  getAuthors() {
-    AuthorController.get().then((authors) => {
-      const authorsFormatted = authors.map(({ id, name }) => ({
-        value: id,
-        label: name,
-      }));
-      this.setState({ authors: [...this.state.authors, ...authorsFormatted] });
-    });
   }
 
   handleAuthor(selectedAuthor) {
@@ -48,8 +33,19 @@ class PostsListFilter extends Component {
     );
   }
 
+  getAuthorsForSelect() {
+    const { authors } = this.props.resGetPosts;
+    const authorsFormatted = authors.map(({ id, name }) => ({
+      value: id,
+      label: name,
+    }));
+    return [...defaultAuthors, ...authorsFormatted];
+  }
+
   render() {
-    const { selectedAuthor, selectedOrder, authors, orders } = this.state;
+    const { selectedAuthor, selectedOrder, orders } = this.state;
+    const authors = this.getAuthorsForSelect();
+
     return (
       <Container>
         <div>

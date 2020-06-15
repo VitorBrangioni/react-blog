@@ -29,7 +29,9 @@ export const BodyContainer = styled.p`
   margin-bottom: 70px;
 `;
 
-export const Legend = styled.p``;
+export const Legend = styled.p`
+  font-weight: bold;
+`;
 
 export const H1 = styled.h1`
   color: #212121;

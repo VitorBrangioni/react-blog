@@ -6,6 +6,7 @@ import { createActions, createReducer } from "reduxsauce";
 export const { Types, Creators } = createActions({
   getPosts: ['authorId', 'order'],
   responseGetPosts: [],
+  responseGetAuthors: [],
 });
 
 /**
@@ -15,6 +16,7 @@ export const { Types, Creators } = createActions({
 const INITIAL_STATE = {
   data: [],
   recentPosts: [],
+  authors: [],
   loading: false,
   error: false,
 };
@@ -22,6 +24,7 @@ const INITIAL_STATE = {
 const getPosts = (state = INITIAL_STATE, { payload }) => ({
   data: payload.data,
   recentPosts: payload.recentPosts,
+  authors: payload.authors,
   loading: payload.loading,
   error: payload.error,
 });
@@ -31,4 +34,5 @@ const getPosts = (state = INITIAL_STATE, { payload }) => ({
  */
 export default createReducer(INITIAL_STATE, {
   [Types.RESPONSE_GET_POSTS]: getPosts,
+  [Types.RESPONSE_GET_AUTHORS]: getPosts,
 });

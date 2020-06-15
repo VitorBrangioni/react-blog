@@ -14,8 +14,8 @@ import {
 
 const Post = ({ post }) => {
   const history = useHistory();
-  const { title, body, metadata } = post;
-  const { authorId, publishedAt } = metadata;
+  const { title, body, author, metadata } = post;
+  const { publishedAt } = metadata;
 
   return (
     <Container>
@@ -26,7 +26,7 @@ const Post = ({ post }) => {
         <ContainerBody>
           <Body>{`${body.slice(0, 200)}...`}</Body>
           <Legend>
-            Author: Vitor Brangioni. | Data:{" "}
+            <strong>Author:</strong> {author.name} | <strong>Date: </strong>
             {DateHelper.formatDatetime(publishedAt)}
           </Legend>
         </ContainerBody>
