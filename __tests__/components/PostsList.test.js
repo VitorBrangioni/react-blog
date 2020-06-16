@@ -1,12 +1,9 @@
+import { render } from "@testing-library/react";
 import React from "react";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 import PostsList from "../../src/views/components/PostsList";
 import postsMock from "../../__mocks__/posts.mock";
-import { shallow } from "enzyme";
-import { render } from "@testing-library/react";
-
-import { createStore } from "redux";
-
-import { Provider } from "react-redux";
 
 const initialState = {
   data: postsMock,
