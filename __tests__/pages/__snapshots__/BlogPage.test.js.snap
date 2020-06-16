@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogPage BlogPage renders without crashing 1`] = `
+exports[`BlogPage BlogPage Snapshot test 1`] = `
 <styled.div>
   <HeaderComponent />
   <styled.main>

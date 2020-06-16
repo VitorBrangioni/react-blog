@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loaders PostsListLoader snapshot 1`] = `
+<ContentLoader
+  viewBox="0 0 380 280"
+>
+  <rect
+    height="130"
+    rx="10"
+    ry="5"
+    width="110"
+    x="0"
+    y="0"
+  />
+  <rect
+    height="130"
+    rx="10"
+    ry="5"
+    width="110"
+    x="130"
+    y="0"
+  />
+  <rect
+    height="130"
+    rx="10"
+    ry="5"
+    width="110"
+    x="260"
+    y="0"
+  />
+  <rect
+    height="130"
+    rx="10"
+    ry="5"
+    width="110"
+    x="0"
+    y="140"
+  />
+  <rect
+    height="130"
+    rx="10"
+    ry="5"
+    width="110"
+    x="130"
+    y="140"
+  />
+  <rect
+    height="130"
+    rx="10"
+    ry="5"
+    width="110"
+    x="260"
+    y="140"
+  />
+</ContentLoader>
+`;
