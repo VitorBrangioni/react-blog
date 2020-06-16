@@ -18,7 +18,7 @@ function Routes({ location }) {
           <Switch>
             <Route
               exact
-              path="/blog"
+              path="/"
               render={(props) => <BlogPage {...props} />}
             />
             <Route

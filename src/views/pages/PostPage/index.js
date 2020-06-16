@@ -25,7 +25,7 @@ export class PostPage extends Component {
       <Container>
         <Header />
         <Main>
-          <BtnClose onClick={() => history.push("blog")}>
+          <BtnClose onClick={() => history.push("/")}>
             <LineXOne />
             <LineXTwo />
           </BtnClose>
