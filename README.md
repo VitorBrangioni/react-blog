@@ -1,4 +1,4 @@
-# react-blog | Blog created with React
+# VitorBrangioni/react-blog | Blog created with React
 
 ## technologies used: 
 
