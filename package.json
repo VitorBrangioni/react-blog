@@ -48,7 +48,8 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
     "jest": "^26.0.1",
-    "metro-react-native-babel-preset": "0.54.0"
+    "metro-react-native-babel-preset": "0.54.0",
+    "redux-mock-store": "^1.5.4"
   },
   "jest": {
     "transform": {

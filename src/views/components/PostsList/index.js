@@ -15,12 +15,12 @@ class PostsList extends Component {
   render() {
     const { data, loading } = this.props.resGetPosts;
     if (loading) {
-      return (<PostsListLoader />);
-    } 
+      return <PostsListLoader />;
+    }
     return (
       <Container>
         {data.map((post, i) => (
-          <Post post={post} key={i} />
+          <Post post={post} key={i} testId={`post-${i}`} />
         ))}
       </Container>
     );

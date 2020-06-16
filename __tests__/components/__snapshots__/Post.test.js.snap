@@ -33,3 +33,38 @@ exports[`Loaders PostsListLoader snapshot 1`] = `
   </styled.div>
 </styled.div>
 `;
+
+exports[`Post PostsListLoader snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.h2>
+        AssCo has revamped the theory of versioning
+      </styled.h2>
+    </styled.div>
+    <styled.div>
+      <styled.p>
+        We will mesh the buzzword "strategic". Our feature set is unparalleled, but our subscriber-defined CAE and non-complex configuration is invariably considered a remarkable achievement. What does the co...
+      </styled.p>
+      <styled.p>
+        <strong>
+          Author:
+        </strong>
+         
+        Zinnia Rickard
+         | 
+        <strong>
+          Date: 
+        </strong>
+        2017-04-12
+      </styled.p>
+    </styled.div>
+    <styled.button
+      data-testid="btn-open-post"
+      onClick={[Function]}
+    >
+      Ler mais
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;

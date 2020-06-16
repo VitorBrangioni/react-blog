@@ -8,7 +8,6 @@ class RecentPosts extends Component {
   render() {
     const { history } = this.props;
     const { recentPosts } = this.props.resGetPosts;
-    console.log("his", history);
 
     return (
       <Container>

@@ -12,13 +12,13 @@ import {
   Legend,
 } from "./styles";
 
-const Post = ({ post }) => {
+const Post = ({ post, testId }) => {
   const history = useHistory();
   const { title, body, author, metadata } = post;
   const { publishedAt } = metadata;
 
   return (
-    <Container>
+    <Container data-testid={testId}>
       <Box>
         <ContainerTitle>
           <Title>{title}</Title>
@@ -31,7 +31,10 @@ const Post = ({ post }) => {
           </Legend>
         </ContainerBody>
 
-        <Button onClick={() => history.push("/post", { post })}>
+        <Button
+          onClick={() => history.push("/post", { post })}
+          data-testid="btn-open-post"
+        >
           Ler mais
         </Button>
       </Box>
