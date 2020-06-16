@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogPage BlogPage renders without crashing 1`] = `
+<styled.div>
+  <HeaderComponent />
+  <styled.main>
+    <Connect(PostsList) />
+  </styled.main>
+  <styled.aside>
+    <Connect(PostsListFilter) />
+    <Connect(RecentPosts) />
+  </styled.aside>
+</styled.div>
+`;

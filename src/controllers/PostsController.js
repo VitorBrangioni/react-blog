@@ -8,10 +8,6 @@ class PostsController {
     });
   }
 
-  static getPostsByAuthor(authorId) {
-    
-  }
-
 }
 
 export default PostsController;

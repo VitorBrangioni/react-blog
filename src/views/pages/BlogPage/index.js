@@ -7,10 +7,9 @@ import PostsListFilters from "../../components/PostsListFilters";
 import { Main, Container, Aside } from "./styles";
 
 export class BlogPage extends Component {
-
   render() {
     const { history } = this.props;
-    
+
     return (
       <Container>
         <Header />
@@ -19,7 +18,7 @@ export class BlogPage extends Component {
         </Main>
         <Aside>
           <PostsListFilters />
-          <RecentPosts history={history}/>
+          <RecentPosts history={history} />
         </Aside>
       </Container>
     );
