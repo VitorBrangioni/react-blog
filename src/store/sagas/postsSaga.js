@@ -1,7 +1,7 @@
-import { put, call, all } from "redux-saga/effects";
-import { Types } from "../ducks/postDuck";
-import PostsController from "../../controllers/PostsController";
+import { call, put } from "redux-saga/effects";
 import AuthorController from "../../controllers/AuthorController";
+import PostsController from "../../controllers/PostsController";
+import { Types } from "../ducks/postDuck";
 
 export function* getPosts({ authorId, order }) {
   try {
